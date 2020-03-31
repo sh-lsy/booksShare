@@ -43,7 +43,7 @@
                            <td>${cate.cate_id}</td>
                             <td>|-${cate.cate_name}</td>
                             <td>
-                            <a class="link-update">修改</a>
+                            <a class="link-update" href="admin_tocateupdate?id=${cate.cate_id }">修改</a>
                              <a class="link-del" >删除</a>
 							</td>
                         </tr>
@@ -53,7 +53,7 @@
 	                           <td>${childCate.cate_id}</td>
 	                            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${childCate.cate_name}</td>
 	                            <td>
-	                            <a class="link-update">修改</a>
+	                            <a class="link-update" href="admin_tocateupdate?id=${childCate.cate_id }">修改</a>
 	                             <a class="link-del" >删除</a>
 								</td>
 	                        </tr>

@@ -24,9 +24,7 @@
             <form action="/booksShare/manage/admin_douserdel" id="myform" method="post">
                 <div class="result-title">
                     <div class="result-list">
-                        <a href="/booksShare/manage/admin_tocateadd"><i class="icon-font"></i>新增分类</a>
-                        <a id="batchDel" href="javascript:delmore('你确定删除这些用户吗？', 'myform')"><i class="icon-font"></i>批量删除</a>
-                        
+                        <a href="/booksShare/manage/admin_tocateadd"><i class="icon-font"></i>新增分类</a>     
                     </div>
                 </div>
                 <div class="result-content">
@@ -40,11 +38,11 @@
                         <c:forEach var="cate" items="${catelist}">
                          <c:if test="${cate.cate_parent_id==0}">
                         <tr>
-                           <td>${cate.cate_id}</td>
-                            <td>|-${cate.cate_name}</td>
+                           <td style="color:red">${cate.cate_id}</td>
+                            <td style="color:red">|-${cate.cate_name}</td>
                             <td>
                             <a class="link-update" href="admin_tocateupdate?id=${cate.cate_id }">修改</a>
-                             <a class="link-del" >删除</a>
+                             <a class="link-del" href="javascript:catedel(${cate.cate_id })" >删除</a>
 							</td>
                         </tr>
                          <c:forEach var="childCate" items="${catelist}">
@@ -54,7 +52,7 @@
 	                            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${childCate.cate_name}</td>
 	                            <td>
 	                            <a class="link-update" href="admin_tocateupdate?id=${childCate.cate_id }">修改</a>
-	                             <a class="link-del" >删除</a>
+	                             <a class="link-del" href="javascript:catedel(${cate.cate_id })">删除</a>
 								</td>
 	                        </tr>
 	                        </c:if>
@@ -63,9 +61,9 @@
                      </c:forEach>
                      </table>
    							<script>
-   							function Delete(mess, url) {
-                        		if(confirm(mess)) {
-                        			location.href=url;
+   							function catedel(id) {
+                        		if(confirm("你确定要删除这个分类吗？")) {
+                        			location.href="admin_docatedel?id="+id;
                         			
                         		}
                         	}

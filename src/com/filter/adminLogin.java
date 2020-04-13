@@ -19,32 +19,16 @@ import javax.servlet.http.HttpSession;
  */
 @WebFilter("/manage/*")
 public class adminLogin implements Filter {
-
-    /**
-     * Default constructor. 
-     */
     public adminLogin() {
-        // TODO Auto-generated constructor stub
     }
-
-	/**
-	 * @see Filter#destroy()
-	 */
 	public void destroy() {
-		// TODO Auto-generated method stub
 	}
-
-	/**
-	 * @see Filter#doFilter(ServletRequest, ServletResponse, FilterChain)
-	 */
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
 		HttpServletRequest req = (HttpServletRequest) request;
 		HttpServletResponse resp = (HttpServletResponse) response;
 		
 		req.setCharacterEncoding("UTF-8");
 		resp.setContentType("text/html;charset=utf-8");
-		
-		
 		
 		HttpSession session = req.getSession();
 		String flag = (String)session.getAttribute("isAdminLogin");

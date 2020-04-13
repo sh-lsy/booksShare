@@ -16,7 +16,7 @@
             	<a href="manage/admin_index.jsp" id="login1">进入后台</a>
             </c:if>
             </p>
-                <form action="#" method="get" class="fl"><input type="text" placeholder="热门搜索：干花花瓶"/><input
+                <form action="#" method="get" class="fl"><input type="text" placeholder="热门搜索：考研资料"/><input
                         type="button"/></form>
                         
                 <div class="btn fl clearfix">
@@ -33,50 +33,23 @@
             </div>
         </div>
         <ul class="clearfix" id="bott">
-            <li><a href="index.html">首页</a></li>
-            <li><a href="#">所有商品</a>
-                <div class="sList">
-                    <div class="wrapper  clearfix"><a href="paint.html">
-                        <dl>
-                            <dt><img src="img/nav1.jpg"/></dt>
-                            <dd>浓情欧式</dd>
-                        </dl>
-                    </a><a href="paint.html">
-                        <dl>
-                            <dt><img src="img/nav2.jpg"/></dt>
-                            <dd>浪漫美式</dd>
-                        </dl>
-                    </a><a href="paint.html">
-                        <dl>
-                            <dt><img src="img/nav3.jpg"/></dt>
-                            <dd>雅致中式</dd>
-                        </dl>
-                    </a><a href="paint.html">
-                        <dl>
-                            <dt><img src="img/nav6.jpg"/></dt>
-                            <dd>简约现代</dd>
-                        </dl>
-                    </a><a href="paint.html">
-                        <dl>
-                            <dt><img src="img/nav7.jpg"/></dt>
-                            <dd>创意装饰</dd>
-                        </dl>
-                    </a></div>
-                </div>
-            </li>
-            <li><a href="flowerDer.html">装饰摆件</a>
+            <li><a href="indexselect">首页</a></li>
+            
+             <c:forEach var="f" items="${flist }">
+            
+            <li><a href="selectproductlist?fid=${f.cate_id }">${f.cate_name }</a>
                 <div class="sList2">
-                    <div class="clearfix"><a href="proList.html">干花花艺</a><a href="vase_proList.html">花瓶花器</a></div>
+                    <div class="clearfix">
+                    	<c:forEach var="c" items="${clist }">
+                    		<c:if test="${f.cate_id == c.cate_parent_id }">
+                    			<a href="selectproductlist?cid=${c.cate_id }">${c.cate_name }</a>
+                    		</c:if>
+                    	</c:forEach>
+                    </div>
                 </div>
             </li>
-            <li><a href="decoration.html">布艺软饰</a>
-                <div class="sList2">
-                    <div class="clearfix"><a href="zbproList.html">桌布罩件</a><a href="bzproList.html">抱枕靠垫</a></div>
-                </div>
-            </li>
-            <li><a href="paint.html">墙式壁挂</a></li>
-            <li><a href="perfume.html">蜡艺香薰</a></li>
-            <li><a href="idea.html">创意家居</a></li>
+           </c:forEach>
+           
         </ul>
     </div>
 </div>

@@ -39,8 +39,8 @@
                     <ul class="sub-menu">
                         <li><a href="/booksShare/manage/admin_douserselect"><i class="icon-font">&#xe008;</i>用户管理</a></li>
                         <li><a href="/booksShare/manage/admin_cateselect"><i class="icon-font">&#xe005;</i>分类管理</a></li>
-                        <li><a href="admin_books.jsp"><i class="icon-font">&#xe006;</i>图书管理</a></li>
-                        <li><a href="admin_order.jsp"><i class="icon-font">&#xe004;</i>订单管理</a></li>
+                        <li><a href="/booksShare/manage/admin_booksselect"><i class="icon-font">&#xe006;</i>图书管理</a></li>
+                        <li><a href="admin_order.jsp"><i class="icon-font">&#xe004;</i>共享管理</a></li>
                         <li><a href="admin_message.jsp"><i class="icon-font">&#xe012;</i>评论管理</a></li>
                         <li><a href="admin.news.jsp"><i class="icon-font">&#xe052;</i>新闻管理</a></li>
                     </ul>

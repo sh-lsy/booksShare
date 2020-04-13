@@ -58,6 +58,59 @@ public class books_categoryDao {
 		return list;
 	}
 	/*
+	 * 查询分类，子分类和父级分类
+	 */
+	
+	public static ArrayList<booksShare_category> selectCate(String flag) {
+		ArrayList<booksShare_category> list = new ArrayList<booksShare_category>();
+		//声明结果集
+		ResultSet rs = null;
+		//获取连接对象
+		Connection conn = Basedao.getconn();
+		
+		PreparedStatement ps = null;
+		
+		
+		
+		try {
+			
+			String sql = null;
+			
+			if(flag!=null && flag.equals("father")){
+			
+				sql = "select * from books_category where cate_parent_id=0";
+			}else{
+				sql = "select * from books_category where cate_parent_id!=0";
+			}
+			ps = conn.prepareStatement(sql);
+			rs = ps.executeQuery();
+			 
+			 while(rs.next()) {
+				 booksShare_category cate = new booksShare_category(
+						 	rs.getInt("cate_id"),
+						 	rs.getString("cate_name"),
+						 	rs.getInt("cate_parent_id")
+						 
+						 );
+				 
+				 
+				 list.add(cate);
+				 
+			 }
+			 
+			 
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			Basedao.closeall(rs, ps, conn);
+		}
+		
+		
+		
+		return list;
+	}
+	/*
 	 * 通过id查询
 	 */
 public static booksShare_category selectById (int id){
@@ -102,5 +155,16 @@ public static booksShare_category selectById (int id){
 					cate.getCate_id()
 			};
 			return Basedao.exectuIUD(sql, params);
+		}
+		/*
+		 * 删除
+		 */
+		public static int del(int id) {
+			String sql = "delete from books_category where cate_id=?";
+			
+			Object[] params = {id};
+			
+			return Basedao.exectuIUD(sql, params);
+			
 		}
 }

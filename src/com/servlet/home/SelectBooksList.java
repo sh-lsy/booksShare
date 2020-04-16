@@ -9,7 +9,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.entity.books;
 import com.entity.booksShare_category;
+import com.service.booksDao;
 import com.service.books_categoryDao;
 
 
@@ -18,8 +20,10 @@ import com.service.books_categoryDao;
  * Servlet implementation class SelectProductList
  */
 @WebServlet("/selectproductlist")
-public class SelectProductList extends HttpServlet {
-	
+public class SelectBooksList extends HttpServlet {
+
+	private static final long serialVersionUID = 1L;
+
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		ArrayList<booksShare_category> flist =  books_categoryDao.selectCate("father");
 		request.setAttribute("flist", flist);
@@ -30,22 +34,21 @@ public class SelectProductList extends HttpServlet {
 		String cid = request.getParameter("cid");
 		
 		int id=0;
-		
+		ArrayList<books> list = null;
 		if(fid!=null) {
 			id=Integer.parseInt(fid);
-			
+			list=booksDao.selectByFid(id);
 		}
 		
 		if(cid!=null) {
 			id=Integer.parseInt(cid);
-			
+			list=booksDao.selectByCid(id);
 		}
 		
 		request.setAttribute("title", books_categoryDao.selectById(id).getCate_name());
 		
-	
-		
-		request.getRequestDispatcher("productlist.jsp").forward(request, response);
+		request.setAttribute("list", list);
+		request.getRequestDispatcher("bookslist.jsp").forward(request, response);
 	}
 
 }

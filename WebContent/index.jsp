@@ -5,7 +5,7 @@
 <html>
 <head lang="en">
     <meta charset="utf-8"/>
-    <title>最家</title>
+    <title>BooksShare</title>
     <link rel="stylesheet" type="text/css" href="css/public.css"/>
     <link rel="stylesheet" type="text/css" href="css/index.css"/>
 </head>
@@ -17,10 +17,10 @@
     <div id="home_slider" class="flexslider">
         <ul class="slides">
             <li>
-                <div class="slide"><img src="img/banner2.jpg"/></div>
+                 <div class="slide"><img src="img/banner1.png"/></div>
             </li>
             <li>
-                <div class="slide"><img src="img/banner1.jpg"/></div>
+                <div class="slide"><img src="img/banner2.png"/></div>
             </li>
         </ul>
     </div>

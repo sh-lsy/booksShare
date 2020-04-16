@@ -26,7 +26,7 @@
                     <c:forEach var="b" items="${blist }">
                         	<tr>
                         		<td>${b.books_id }</td>
-                        		<td><img src="../img/books/${b.books_filename}" width="80" height="80">
+                        		<td><img src="http://localhost:8080/img/${b.books_filename}" width="80" height="80">
                         			${b.books_name }
                         		</td>
                         		<td>

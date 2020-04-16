@@ -9,8 +9,10 @@ public class books {
 	private int books_fid;
 	private int books_cid;
 	private String books_filename;
+	private String books_filename1;
+	private String books_filename2;
 	public books(int books_id, String books_name, String books_description, int books_stock, String books_user,
-			int books_fid, int books_cid, String books_filename) {
+			int books_fid, int books_cid, String books_filename, String books_filename1, String books_filename2) {
 		super();
 		this.books_id = books_id;
 		this.books_name = books_name;
@@ -20,6 +22,8 @@ public class books {
 		this.books_fid = books_fid;
 		this.books_cid = books_cid;
 		this.books_filename = books_filename;
+		this.books_filename1 = books_filename1;
+		this.books_filename2 = books_filename2;
 	}
 	public int getBooks_id() {
 		return books_id;
@@ -69,5 +73,18 @@ public class books {
 	public void setBooks_filename(String books_filename) {
 		this.books_filename = books_filename;
 	}
+	public String getBooks_filename1() {
+		return books_filename1;
+	}
+	public void setBooks_filename1(String books_filename1) {
+		this.books_filename1 = books_filename1;
+	}
+	public String getBooks_filename2() {
+		return books_filename2;
+	}
+	public void setBooks_filename2(String books_filename2) {
+		this.books_filename2 = books_filename2;
+	}
+    
 	
 }

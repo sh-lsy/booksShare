@@ -36,9 +36,21 @@
                             </tr>
                             
                              <tr>
-                                <th><i class="require-red">*</i>图书图片：</th>
+                                <th><i class="require-red">*</i>图书图片1：</th>
                                 <td>
-                                    <input class="common-text required" id="title" name="photo" size="50" value="" type="file">
+                                    <input class="common-text required" id="title" name="photo1" size="50" value="" type="file">
+                                </td>
+                            </tr>
+                             <tr>
+                                <th><i class="require-red">*</i>图书图片2：</th>
+                                <td>
+                                    <input class="common-text required" id="title" name="photo2" size="50" value="" type="file">
+                                </td>
+                            </tr>
+                             <tr>
+                                <th><i class="require-red">*</i>图书图片3：</th>
+                                <td>
+                                    <input class="common-text required" id="title" name="photo3" size="50" value="" type="file">
                                 </td>
                             </tr>
                               <tr>

@@ -23,18 +23,24 @@ $(function () {
         }
     });
     $("#wa li").click(function () {
+    	
         $(this).addClass("on").siblings().removeClass("on");
         var a = $(this).find("a").text();
-        $(".dkuang").find("p.one").each(function () {
-            var b = $(this).text();
-            if (a == b) {
-                $(this).parent(".dkuang").show().siblings(".dkuang").hide()
-            }
-            $("#wa li").eq(0).click(function () {
-                $(".dkuang").show()
-            })
-        })
+        if(a == '全部有效订单'){
+        	$('#reorder').hide();
+        	$('#rorder').hide();
+        	$('#allorder').show();
+        }else if(a == '待收货'){
+        	$('#reorder').show();
+        	$('#allorder').hide();
+        	$('#rorder').hide();
+        }else{
+        	$('#reorder').hide();
+        	$('#allorder').hide();
+        	$('#rorder').show();
+        }
     });
+    
     $(".sx div:gt(0)").hide();
     $(".sx div").each(function (a) {
         if ($(this).html() == "") {
@@ -129,4 +135,6 @@ $(function () {
     }, function () {
         $(this).children(".wuliu").fadeOut(100)
     })
+    $('#reorder').hide();
+	$('#rorder').hide();
 });

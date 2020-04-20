@@ -46,17 +46,25 @@
                                                                             data-src="http://localhost:8080/img/${b.books_filename2 }"></p>
                     </div>
                     <p>数量&nbsp;&nbsp;库存<span>${b.books_stock }</span>本</p>
-                    <div class="num clearfix"><img class="fl sub" src="img/temp/sub.jpg"><span class="fl"
-                                                                                               contentEditable="true">1</span><img
-                            class="fl add" src="img/temp/add.jpg">
+                    <div class="num clearfix"><img class="fl sub" src="img/temp/sub.jpg">
+                    <span class="fl" contentEditable="true" id="count">1</span>
+                    <img class="fl add" src="img/temp/add.jpg">
                         <p class="please fl">请选择商品属性!</p></div>
                 </div>
-                <div class="btns clearfix"><a href="#2"><p class="buy fl">立即租用</p></a><a href="#2"><p class="cart fr">
-                    加入购物车</p></a></div>
+                <div class="btns clearfix">
+                <a href="javascript:booksAdd(${b.books_id },'z')"> <p class="buy fl">立即租用</p></a>
+                <a href="javascript:booksAdd(${b.books_id },'s')"><p class="cart fr">加入购物车</p></a></div>
             </div>
         </div>
     </div>
 </div>
+<script>
+	function booksAdd(id,url){
+		var count = document.getElementById("count").innerHTML;
+		
+		location.href='cartadd?id='+id+'&count='+count+'&url='+url;
+	}
+</script>
 <div class="introMsg wrapper clearfix">
     <div class="msgL fl">
         <div class="msgTit clearfix"><a class="on">图书详情</a><a>图书交流</a></div>
@@ -180,7 +188,7 @@
         </div>
     </div>
 </div><!--返回顶部-->
-<div class="gotop"><a href="cart.html">
+<div class="gotop"><a href="showcart">
     <dl class="goCart">
         <dt><img src="img/gt1.png"/></dt>
         <dd>去购<br/>物车</dd>
@@ -202,10 +210,12 @@
     </dl>
 </a>
     <p>400-800-8200</p></div>
-<div class="msk"></div><!--footer-->
+<div class="msk"></div>
+<!--footer-->
 <div class="footer">
     <p class="dibu">BooksShare&copy;2020-2022公司版权所有 渝ICP备080100-44备0000111000号<br/>
-        违法和不良信息举报电话：100-1000-1000</p></div>
+        违法和不良信息举报电话：100-1000-1000</p>
+</div>
 <script src="js/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
 <script src="js/jquery.SuperSlide.2.1.1.js" type="text/javascript" charset="utf-8"></script>
 <script src="js/public.js" type="text/javascript" charset="utf-8"></script>

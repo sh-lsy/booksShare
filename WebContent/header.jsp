@@ -3,7 +3,7 @@
 <%@  taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <div class="head">
     <div class="wrapper clearfix">
-        <div class="clearfix" id="top"><h1 class="fl"><a href="index.jsp">
+        <div class="clearfix" id="top"><h1 class="fl"><a href="indexselect">
         <img src="img/temp/logo.png" style="width: 144px; opacity: 0.8;"/></a></h1>
             <div class="fr clearfix" id="top1"><p class="fl">
             <c:if test="${isLogin !=1 }">

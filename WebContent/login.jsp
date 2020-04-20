@@ -15,7 +15,7 @@
 </head>
 <body>
 <div class="login">
-    <form action="login" method="post"><h1><a href="index.jsp">
+    <form action="login" method="post"><h1><a href="indexselect">
       <img  id="headImg" src="img/temp/logo.png" style="width: 144px; opacity: 0.8;"></a></h1>
         <p></p>
         <p><input type="text" name="userName" value="昵称/邮箱/手机号" style="color: #999;"

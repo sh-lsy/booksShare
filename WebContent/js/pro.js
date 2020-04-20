@@ -104,7 +104,7 @@ $(function () {
         a--;
         $(".ok span").text(a);
         if (a == 0) {
-            window.location.href = ("myorderq.html")
+            window.location.href = ("userorderselect")
         }
     }
 

@@ -373,6 +373,11 @@ article, aside, figcaption, figure, footer, header, hgroup, nav, section, summar
 /*********************footer********************/
 .footer {
     min-width: 1160px;
+    
+}
+.cartfo{
+	position:relative;
+    bottom:-375px;;
 }
 
 .footer .top {

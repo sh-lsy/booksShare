@@ -26,9 +26,7 @@ import com.service.booksDao;
  */
 @WebServlet("/manage/admin_dobooksadd")
 public class DoBooksAdd extends HttpServlet {
-	/**
-	 * 
-	 */
+	
 	private static final long serialVersionUID = 1L;
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

@@ -236,13 +236,13 @@
     transition: all .5s;
 }
 
-.Bott .you .dkuang .shohou p.fr a:hover {
+.Bott .you .dkuang  .xq:hover {
     background: #757575;
     color: #fff;
     transform: translate(0.5);
 }
 
-.Bott .you .dkuang .shohou p.fr a:nth-child(1) {
+.Bott .you .dkuang .myorder  a:nth-child(1) {
     margin-bottom: 10px;
 }
 
@@ -250,12 +250,17 @@
     color: #A10000;
 }
 
-.Bott .you .deng .shohou p.fr a:nth-child(1) {
+.Bott .you .dkuang .myorder  a:nth-child(1) {
     background: #A10000;
     color: #fff;
     border: 1px solid #A10000;
 }
-
+.Bott .you .dkuang .myorder  a:nth-child(1):hover {
+	padding: 10px;
+	background: #A10000;
+    color: #fff;
+    border: 1px solid #A10000;
+}
 .Bott .you .fenye {
     margin: 45px auto 0;
     width: 140px;

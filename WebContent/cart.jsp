@@ -44,7 +44,7 @@
     <a href="indexselect" class="fr">寻找图书&gt;</a></p></div><!-----------------table------------------->
     <div class="table wrapper">
         <div class="tr">
-            <div>商品</div>
+            <div>图书</div>
             <div>共享者</div>
             <div>数量</div>
             <div>操作</div>

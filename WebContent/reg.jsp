@@ -15,7 +15,7 @@
 </head>
 <body>
 <div class="reg">
-    <form action="register" method="post" onsubmit="return submitcheck()"><h1><a href="index.jsp">
+    <form action="register" method="post" onsubmit="return submitcheck()"><h1><a href="indexselect">
       <img src="img/temp/logo.png" id="headImg"></a></h1>
         <h2 id="regH">用户注册</h2> 
         <p><input class="messages" type="text" name="userName" id="userName" value="" ><span  id="user-s"></span></p>
@@ -31,7 +31,7 @@
          <datalist id="sexlist">
                 <option>学生</option>
                 <option>老师</option>
-                <option>外来人员</option>
+                
             </datalist>
         </p>
         <p><input class="code" type="text" name="veryCode" id="veryCode" value="" placeholder="验证码">

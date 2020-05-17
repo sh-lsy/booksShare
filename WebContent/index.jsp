@@ -8,6 +8,12 @@
     <title>BooksShare</title>
     <link rel="stylesheet" type="text/css" href="css/public.css"/>
     <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <style>
+    	.imgwh{
+    		width:268px;
+    		height:268px;
+    	}
+    </style>
 </head>
 <body>
 <!-- ----------------------------head---------------------------- -->
@@ -30,74 +36,57 @@
     <a href="selectproductlist?cid=39"><img src="img/i1.jpg"/></a>
     <a href="selectproductlist?fid=34"><img src="img/i2.jpg"/></a>
     <a href="selectproductlist?fid=35"><img src="img/i3.jpg"/></a></div>
-</div><!------------------------------news------------------------------>
+</div>
+
+<!------------------------------news------------------------------>
 <div class="news">
-    <div class="wrapper"><h2><img src="img/ih1.jpg"/></h2>
-        <div class="top clearfix"><a href="proDetail.html"><img src="img/n1.jpg"/>
-            <p></p></a><a href="proDetail.html"><img src="img/n2.jpg"/>
-            <p></p></a><a href="proDetail.html"><img src="img/n3.jpg"/>
-            <p></p></a></div>
-        <div class="bott clearfix"><a href="proDetail.html"><img src="img/n4.jpg"/>
-            <p></p></a><a href="proDetail.html"><img src="img/n5.jpg"/>
-            <p></p></a><a href="proDetail.html"><img src="img/n6.jpg"/>
-            <p></p></a></div>
-        <h2><img src="img/ih2.jpg"/></h2>
-        <div class="flower clearfix tran"><a href="proDetail.html" class="clearfix">
+    <div class="wrapper">
+    
+        <h2><img src="img/ch1.jpg"/></h2>
+        
+        <div class="flower clearfix tran">
+        
+        <c:forEach var="b1" items="${list1 }">
+        
+        <a href="selectbooksview?id=${b1.books_id}" class="clearfix">
             <dl>
-                <dt><span class="abl"></span><img src="img/flo1.jpg"/><span class="abr"></span></dt>
-                <dd>【花艺】七头美丽玫瑰仿真花束</dd>
-                <dd><span>¥ 79.00</span></dd>
+                <dt><span class="abl"></span>
+                <img src="http://localhost:8080/img/${b1.books_filename }" class="imgwh"/><span class="abr"></span></dt>
+                <dd>【books】${b1.books_name }</dd>
+                <dd><span>${b1.books_stock } 本</span></dd>
             </dl>
-        </a><a href="proDetail.html">
-            <dl>
-                <dt><span class="abl"></span><img src="img/flo2.jpg"/><span class="abr"></span></dt>
-                <dd>【花艺】七头美丽玫瑰仿真花束</dd>
-                <dd><span>¥ 79.00</span></dd>
-            </dl>
-        </a><a href="proDetail.html">
-            <dl>
-                <dt><span class="abl"></span><img src="img/flo3.jpg"/><span class="abr"></span></dt>
-                <dd>【花艺】七头美丽玫瑰仿真花束</dd>
-                <dd><span>¥ 79.00</span></dd>
-            </dl>
-        </a></div>
-        <div class="flower clearfix tran"><a href="proDetail.html">
-            <dl>
-                <dt><span class="abl"></span><img src="img/flo4.jpg"/><span class="abr"></span></dt>
-                <dd>【花艺】七头美丽玫瑰仿真花束</dd>
-                <dd><span>¥ 79.00</span></dd>
-            </dl>
-        </a><a href="proDetail.html">
-            <dl>
-                <dt><span class="abl"></span><img src="img/flo5.jpg"/><span class="abr"></span></dt>
-                <dd>【花艺】七头美丽玫瑰仿真花束</dd>
-                <dd><span>¥ 79.00</span></dd>
-            </dl>
-        </a><a href="proDetail.html">
-            <dl>
-                <dt><span class="abl"></span><img src="img/flo6.jpg"/><span class="abr"></span></dt>
-                <dd>【花艺】七头美丽玫瑰仿真花束</dd>
-                <dd><span>¥ 79.00</span></dd>
-            </dl>
-        </a></div>
+        </a>
+        
+        </c:forEach>
+        
+        
+     </div>
     </div>
-</div><!------------------------------ad------------------------------><a href="#" class="ad"><img
-        src="img/ib1.jpg"/></a><!------------------------------people------------------------------>
+</div>
+
+<!------------------------------people------------------------------>
 <div class="people">
     <div class="wrapper"><h2><img src="img/ih3.jpg"/></h2>
-        <div class="pList clearfix tran"><a href="proDetail.html">
+        <div class="pList clearfix tran">
+       
+        <a href="proDetail.html">
             <dl>
-                <dt><span class="abl"></span><img src="img/s7.jpg"/><span class="abr"></span></dt>
+                <dt><span class="abl"></span><img src="img/s7.jpg" /><span class="abr"></span></dt>
                 <dd>【最家】不锈钢壁饰墙饰软装</dd>
-                <dd><span>￥688.00</span></dd>
+                <dd><span>￥1111</span></dd>
             </dl>
-        </a><a href="proDetail.html">
+        </a>
+        
+        
+        <a href="proDetail.html">
             <dl>
                 <dt><span class="abl"></span><img src="img/s10.jpg"/><span class="abr"></span></dt>
                 <dd>【最家】小城动物木板画壁挂北欧</dd>
                 <dd><span>￥188.00</span></dd>
             </dl>
-        </a><a href="proDetail.html">
+        </a>
+        
+        <a href="proDetail.html">
             <dl>
                 <dt><span class="abl"></span><img src="img/s4.jpg"/><span class="abr"></span></dt>
                 <dd>【最家】玄关假山水壁饰背景墙饰挂件创意</dd>
@@ -109,57 +98,10 @@
                 <dd>【最家】金属树枝壁饰铜鸟装饰品</dd>
                 <dd><span>￥928.00</span></dd>
             </dl>
-        </a></div>
-        <div class="pList clearfix tran"><a href="proDetail.html">
-            <dl>
-                <dt><span class="abl"></span><img src="img/s6.jpg"/><span class="abr"></span></dt>
-                <dd>【最家】金属壁饰创意背景墙面挂件创意</dd>
-                <dd><span>￥228.00</span></dd>
-            </dl>
-        </a><a href="proDetail.html">
-            <dl>
-                <dt><span class="abl"></span><img src="img/s8.jpg"/><span class="abr"></span></dt>
-                <dd>【最家】小城动物木板画壁挂北欧</dd>
-                <dd><span>￥199.00</span></dd>
-            </dl>
-        </a><a href="proDetail.html">
-            <dl>
-                <dt><span class="abl"></span><img src="img/s12.jpg"/><span class="abr"></span></dt>
-                <dd>【最家】欧式复古挂钟创意餐厅钟表家居挂件</dd>
-                <dd><span>￥666.00</span></dd>
-            </dl>
-        </a><a href="proDetail.html">
-            <dl>
-                <dt><span class="abl"></span><img src="img/s1.jpg"/><span class="abr"></span></dt>
-                <dd>【最家】客厅地中海欧式现代相片墙创意</dd>
-                <dd><span>￥59.80</span></dd>
-            </dl>
-        </a></div>
-        <div class="pList clearfix tran"><a href="proDetail.html">
-            <dl>
-                <dt><span class="abl"></span><img src="img/s5.jpg"/><span class="abr"></span></dt>
-                <dd>【最家】铁艺荷叶壁挂软装背景墙上装饰品</dd>
-                <dd><span>￥800.00</span></dd>
-            </dl>
-        </a><a href="proDetail.html">
-            <dl>
-                <dt><span class="abl"></span><img src="img/s3.jpg"/><span class="abr"></span></dt>
-                <dd>【最家】欧式照片墙 创意组合结婚礼物</dd>
-                <dd><span>￥189.00</span></dd>
-            </dl>
-        </a><a href="proDetail.html">
-            <dl>
-                <dt><span class="abl"></span><img src="img/s2.jpg"/><span class="abr"></span></dt>
-                <dd>【最家】欧式钟表相框墙挂墙创意组合</dd>
-                <dd><span>￥148.00</span></dd>
-            </dl>
-        </a><a href="proDetail.html">
-            <dl>
-                <dt><span class="abl"></span><img src="img/s11.jpg"/><span class="abr"></span></dt>
-                <dd>【最家】小城动物木板画壁挂北欧</dd>
-                <dd><span>￥188.00</span></dd>
-            </dl>
-        </a></div>
+        </a>
+        
+        </div>
+
     </div>
 </div><!--返回顶部-->
 <div class="gotop"><a href="showcart">

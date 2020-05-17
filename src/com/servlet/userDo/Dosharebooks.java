@@ -102,7 +102,7 @@ public class Dosharebooks extends HttpServlet {
 				int count = booksDao.insert(b);
 				            userbooksDao.insert(b);
 			if(count >0 ) {
-					response.sendRedirect("userbooks.jsp");
+					response.sendRedirect("showmysharebooks");
 			}else {
 						PrintWriter out = response.getWriter();
 						

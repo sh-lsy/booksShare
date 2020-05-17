@@ -20,6 +20,11 @@ public class DoUserSelect extends HttpServlet {
 
 
 	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -37,6 +42,7 @@ public class DoUserSelect extends HttpServlet {
 		
 		
 		//获取所有用户信息
+		
 		ArrayList<booksShare_user> list=userDao.selectAll(cpage,count,keyword);
 		
 		

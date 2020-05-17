@@ -21,15 +21,7 @@
 </div><!-------------------current---------------------->
 <div class="current">
     <div class="wrapper clearfix"><h3 class="fl">${title}</h3>
-        <div class="fr choice"><p class="default">排序方式</p>
-            <ul class="select">
-                <li>新品上市</li>
-                <li>销量从高到低</li>
-                <li>销量从低到高</li>
-                <li>价格从高到低</li>
-                <li>价格从低到高</li>
-            </ul>
-        </div>
+        
     </div>
 </div><!----------------proList------------------------->
 <ul class="proList wrapper clearfix">

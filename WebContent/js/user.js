@@ -30,14 +30,24 @@ $(function () {
         	$('#reorder').hide();
         	$('#rorder').hide();
         	$('#allorder').show();
+        	$('#completeorder').hide();
         }else if(a == '待收货'){
         	$('#reorder').show();
         	$('#allorder').hide();
         	$('#rorder').hide();
-        }else{
+        	$('#completeorder').hide();
+        }else if(a == '已确认'){
         	$('#reorder').hide();
         	$('#allorder').hide();
         	$('#rorder').show();
+        	$('#completeorder').hide();
+        	
+        }else{
+        	
+        	$('#reorder').hide();
+        	$('#allorder').hide();
+        	$('#rorder').hide();
+        	$('#completeorder').show();
         }
     });
     
@@ -137,4 +147,5 @@ $(function () {
     })
     $('#reorder').hide();
 	$('#rorder').hide();
+	$('#completeorder').hide();
 });

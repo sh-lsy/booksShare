@@ -18,9 +18,9 @@
     <form action="login" method="post"><h1><a href="indexselect">
       <img  id="headImg" src="img/temp/logo.png" style="width: 144px; opacity: 0.8;"></a></h1>
         <p></p>
-        <p><input type="text" name="userName" value="昵称/邮箱/手机号" style="color: #999;"
-          onfocus="if(this.value=='昵称/邮箱/手机号'){this.value='';this.style.color='#424242'}"
-          onblur="if(this,value==''){this.value='昵称/邮箱/手机号';this.style.color='#999'}"></p>
+        <p><input type="text" name="userName" value="昵称：" style="color: #999;"
+          onfocus="if(this.value=='昵称：'){this.value='';this.style.color='#424242'}"
+          onblur="if(this,value==''){this.value='昵称：';this.style.color='#999'}"></p>
       
         <p><input type="password" name="password" placeholder="请输入密码："></p>
         <p><input type="submit" name="" value="登  录"></p>

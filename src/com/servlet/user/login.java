@@ -12,6 +12,7 @@ import javax.servlet.http.HttpSession;
 
 import com.entity.booksShare_user;
 import com.service.userDao;
+import com.util.MD5Utils;
 
 /**
  * Servlet implementation class login
@@ -19,7 +20,8 @@ import com.service.userDao;
 @WebServlet("/login")
 public class login extends HttpServlet {
 
-   
+  
+	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
@@ -30,6 +32,7 @@ public class login extends HttpServlet {
 		
 		String userName = request.getParameter("userName");
 		String passWord = request.getParameter("password");
+		
 		
 		int count = userDao.selectByNM(userName, passWord);
 		

@@ -18,6 +18,8 @@ import com.service.userDao;
 @WebServlet("/register")
 public class Register extends HttpServlet {
 	
+	private static final long serialVersionUID = 1L;
+
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
@@ -41,6 +43,9 @@ public class Register extends HttpServlet {
 		String email = request.getParameter("email");
 		String mobile = request.getParameter("mobile");
 		String address = request.getParameter("address");
+		
+		//加密
+		
 		
 		booksShare_user u=new booksShare_user(username, name, pwd, sex, year, null, email, mobile, address, 1);
 			

@@ -36,6 +36,10 @@
 				width: 100px;
 				background-color: #006dcc;
 			}
+			.ding div form{
+			border-bottom: 1px solid rgba(255,255,255,0.1);
+			}
+			
 		</style>
 </head>
 <body><!------------------------------head------------------------------>
@@ -43,13 +47,12 @@
     <div class="wrapper clearfix">
         <div class="clearfix" id="top"><h1 class="fl"><a href="indexselect">
          <img src="img/temp/logo.png" style="width: 144px; opacity: 0.8;"/></a></h1>
-            <div class="fr clearfix" id="top1"><p class="fl"><a href="#" id="login">登录</a><a href="#" id="reg">注册</a>
+            <div class="fr clearfix" id="top1">
+            <p class="fl"><a href="#" id="login">登录</a><a href="#" id="reg">注册</a>
             </p>
-                <form action="#" method="get" class="fl">
+                <form  class="fl " >
                 </form>
-                <div class="btn fl clearfix"><a href="mygxin.jsp"><img src="img/grzx.png"/></a><a href="#" class="er1"><img
-                        src="img/ewm.png"/></a><a href="cart.jsp"><img src="img/gwc.png"/></a>
-                    <p><a href="#"></a></p></div>
+                
             </div>
         </div>
         <ul class="clearfix" id="bott">
@@ -83,11 +86,11 @@
                 <h4>个人中心</h4>
                 <ul>
                     <li ><a href="mygxin.jsp">我的中心</a></li>
-                    <li><a href="userbooks.jsp">我的共享</a></li>
+                    <li><a href="showmysharebooks">我的共享</a></li>
                 </ul>
                 <h4>账户管理</h4>
                 <ul>
-                    <li><a href="mygrxx.html">个人信息</a></li>
+                    <li><a href="tomygrxx">个人信息</a></li>
                     <li><a href="remima.html">修改密码</a></li>
                 </ul>
             </div>

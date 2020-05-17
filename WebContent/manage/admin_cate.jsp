@@ -9,16 +9,7 @@
             <div class="crumb-list"><i class="icon-font"></i><a href="admin_index.jsp">首页</a><span class="crumb-step">&gt;</span><span class="crumb-name">分类管理</span></div>
         </div>
         <div class="search-wrap">
-            <div class="search-content">
-                <form action="/booksShare/manage/admin_douserselect" method="get">
-                    <table class="search-tab">
-                    	<tr>
-                            <td><input class="common-text" placeholder="关键字" name="keywords" value="${param.keywords}" id="" type="text"></td>
-                            <td><input class="btn btn-primary btn2" name="sub" value="查询" type="submit"></td>
-                        </tr>
-                    </table>
-                </form>
-            </div>
+            
         </div>
         <div class="result-wrap">
             <form action="/booksShare/manage/admin_douserdel" id="myform" method="post">
@@ -52,7 +43,7 @@
 	                            <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${childCate.cate_name}</td>
 	                            <td>
 	                            <a class="link-update" href="admin_tocateupdate?id=${childCate.cate_id }">修改</a>
-	                             <a class="link-del" href="javascript:catedel(${cate.cate_id })">删除</a>
+	                             <a class="link-del" href="javascript:catedel(${childCate.cate_id })">删除</a>
 								</td>
 	                        </tr>
 	                        </c:if>

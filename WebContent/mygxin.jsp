@@ -53,11 +53,11 @@
                 <h4>个人中心</h4>
                 <ul>
                     <li class="on"><a href="mygxin.jsp">我的中心</a></li>
-                    <li><a href="userbooks.jsp">我的共享</a></li>
+                    <li><a href="showmysharebooks">我的共享</a></li>
                 </ul>
                 <h4>账户管理</h4>
                 <ul>
-                    <li><a href="mygrxx.html">个人信息</a></li>
+                    <li><a href="tomygrxx">个人信息</a></li>
                     <li><a href="remima.html">修改密码</a></li>
                 </ul>
             </div>

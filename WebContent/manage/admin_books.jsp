@@ -16,11 +16,14 @@
                     </div>
                 </div>
                 <div class="result-content">
-                    <table class="result-tab" width="60%">
+                    <table class="result-tab" width="80%">
                    
                         <tr>
                             <th>ID</th>
                             <th>图书名称</th>
+                           
+                            <th>数量</th>
+                            <th>共享者</th>
                             <th>操作</th>
                         </tr>
                     <c:forEach var="b" items="${blist }">
@@ -29,8 +32,11 @@
                         		<td><img src="http://localhost:8080/img/${b.books_filename}" width="80" height="80">
                         			${b.books_name }
                         		</td>
+                        		
+                        		<td>${b.books_stock }</td>
+                        		<td>${b.books_user }</td>
                         		<td>
-                        			<a href="">修改</a>
+                        			
                         			<a href="">删除</a>
                         		</td>
                         	</tr>

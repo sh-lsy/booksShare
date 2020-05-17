@@ -14,12 +14,15 @@ import com.service.userDao;
 
 
 
+
 /**
  * Servlet implementation class DoUserAdd
  */
 @WebServlet("/manage/admin_douseradd")
 public class DoUserAdd extends HttpServlet {
 	
+	private static final long serialVersionUID = 1L;
+
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		response.getWriter().append("Served at: ").append(request.getContextPath());
@@ -40,6 +43,8 @@ public class DoUserAdd extends HttpServlet {
 		String email = request.getParameter("email");
 		String mobile = request.getParameter("mobile");
 		String address = request.getParameter("address");
+		
+
 		
 		booksShare_user u=new booksShare_user(username, name, pwd, sex, year, null, email, mobile, address, 1);
 			

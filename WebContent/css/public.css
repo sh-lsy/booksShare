@@ -129,7 +129,7 @@ article, aside, figcaption, figure, footer, header, hgroup, nav, section, summar
     line-height: 30px;
     margin: 0 10px;
     margin-top: 13px;
-    border-bottom: 1px solid #262626;
+    
 }
 
 .head div form input:nth-child(1) {

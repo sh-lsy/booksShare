@@ -21,6 +21,7 @@ public class CateSelect extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		ArrayList<booksShare_category> catelist=books_categoryDao.selectAll();
 		request.setAttribute("catelist", catelist);
+	
 		request.getRequestDispatcher("admin_cate.jsp").forward(request, response);
 	}
 

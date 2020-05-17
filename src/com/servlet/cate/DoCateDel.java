@@ -15,6 +15,9 @@ import com.service.books_categoryDao;
 @WebServlet("/manage/admin_docatedel")
 public class DoCateDel extends HttpServlet {
 
+
+	private static final long serialVersionUID = 1L;
+
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */

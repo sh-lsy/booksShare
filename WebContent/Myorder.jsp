@@ -20,7 +20,7 @@
                 </form>
                 <div class="btn fl clearfix"><a href="mygxin.jsp"><img src="img/grzx.png"/></a><a href="#" class="er1"><img
                         src="img/ewm.png"/></a><a href="cart.jsp"><img src="img/gwc.png"/></a>
-                    <p><a href="#"><img src="img/smewm.png"/></a></p></div>
+                    <p><a href="#"></a></p></div>
             </div>
         </div>
         <ul class="clearfix" id="bott">
@@ -55,11 +55,11 @@
                 <h4>个人中心</h4>
                 <ul>
                     <li ><a href="mygxin.jsp">我的中心</a></li>
-                    <li><a href="address.html">我的共享</a></li>
+                    <li><a href="showmysharebooks">我的共享</a></li>
                 </ul>
                 <h4>账户管理</h4>
                 <ul>
-                    <li><a href="mygrxx.html">个人信息</a></li>
+                    <li><a href="tomygrxx">个人信息</a></li>
                     <li><a href="remima.html">修改密码</a></li>
                 </ul>
             </div>
@@ -71,6 +71,7 @@
                     <li class="on"><a href="javascript:;">全部有效订单</a></li>
                     <li><a href="javascript:;">待收货</a></li>
                     <li><a href="javascript:;">已确认</a></li>
+                    <li><a href="javascript:;">共享完成</a></li>
                 </ul>
                 <form action="#" method="get" class="fr clearfix">
                 <input type="text" name="" id="" value="" placeholder="请输入商品名称、订单号"/>
@@ -118,6 +119,36 @@
 				<c:if test="${no.order_valid ==2 }">
             <div class="dkuang ">
             <p class="one">已收货</p>
+                <div class="word clearfix">
+                    <ul class="fl clearfix">
+                    	<li>${no.order_time}</li>
+                        <li>订单号:${no.order_no}</li>
+                        <li>取书方式:${no.order_way }</li>
+                    </ul>                   
+                    <p class="fr ">
+                    <a href="orderxq?no=${no.order_no }" class="xq">订单详情</a>
+                    </p>
+                    </div>
+         		<c:forEach var="o" items="${requestScope.orderlist }">
+                	<c:if test="${o.order_no == no.order_no }">
+                	<div class="shohou clearfix">
+                	<a href="#" class="fl">
+                	<img src="http://localhost:8080/img/${o.order_b_filename }" /></a>
+                    <p class="fl">
+                    <a href="#">${o.order_b_name}</a>
+                    <a href="#">共享者:${o.order_b_user}</a>
+                    <a href="#">数量:${o.order_quantity}</a>
+                    </p>
+                    <p class="fr"><a href="javascript:;">共享者:${o.order_b_user}</a>
+                    </div>
+                    </c:if>
+                    </c:forEach>
+            </div>
+            </c:if>
+            
+            <c:if test="${no.order_valid ==3 }">
+            <div class="dkuang ">
+            <p class="one">共享完成</p>
                 <div class="word clearfix">
                     <ul class="fl clearfix">
                     	<li>${no.order_time}</li>
@@ -196,7 +227,41 @@
                         <li>取书方式:${no.order_way }</li>
                     </ul>                   
                     <p class="fr ">
-                    <a href="orderxq.html"class="xq">订单详情</a>
+                    <a href="orderxq?no=${no.order_no }"class="xq">订单详情</a>
+                    </p>
+                    </div>
+         		<c:forEach var="o" items="${requestScope.orderlist }">
+                	<c:if test="${o.order_no == no.order_no }">
+                	<div class="shohou clearfix">
+                	<a href="#" class="fl">
+                	<img src="http://localhost:8080/img/${o.order_b_filename }" /></a>
+                    <p class="fl">
+                    <a href="#">${o.order_b_name}</a>
+                    <a href="#">共享者:${o.order_b_user}</a>
+                    <a href="#">数量:${o.order_quantity}</a>
+                    </p>
+                    <p class="fr"><a href="javascript:;">共享者:${o.order_b_user}</a>
+                    </div>
+                    </c:if>
+                    </c:forEach>
+            </div>
+            </c:if>
+            </c:forEach>
+			</div>
+			
+			<div id="completeorder">
+			<c:forEach var="no" items="${requestScope.no }">
+			<c:if test="${no.order_valid ==3 }">
+            <div class="dkuang ">
+            <p class="one">共享完成</p>
+                <div class="word clearfix">
+                    <ul class="fl clearfix">
+                    	<li>${no.order_time}</li>
+                        <li>订单号:${no.order_no}</li>
+                        <li>取书方式:${no.order_way }</li>
+                    </ul>                   
+                    <p class="fr ">
+                    <a href="orderxq?no=${no.order_no }"class="xq">订单详情</a>
                     </p>
                     </div>
          		<c:forEach var="o" items="${requestScope.orderlist }">

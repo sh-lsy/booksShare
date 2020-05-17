@@ -40,20 +40,11 @@
                         <li><a href="/booksShare/manage/admin_douserselect"><i class="icon-font">&#xe008;</i>用户管理</a></li>
                         <li><a href="/booksShare/manage/admin_cateselect"><i class="icon-font">&#xe005;</i>分类管理</a></li>
                         <li><a href="/booksShare/manage/admin_booksselect"><i class="icon-font">&#xe006;</i>图书管理</a></li>
-                        <li><a href="admin_order.jsp"><i class="icon-font">&#xe004;</i>共享管理</a></li>
-                        <li><a href="admin_message.jsp"><i class="icon-font">&#xe012;</i>评论管理</a></li>
-                        <li><a href="admin.news.jsp"><i class="icon-font">&#xe052;</i>新闻管理</a></li>
+                        <li><a href="/booksShare/manage/admin_doorderselect"><i class="icon-font">&#xe004;</i>共享管理</a></li>
+                        <li><a href="/booksShare/manage/admin_discussselect"><i class="icon-font">&#xe012;</i>评论管理</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a href="#"><i class="icon-font">&#xe018;</i>系统管理</a>
-                    <ul class="sub-menu">
-                        <li><a href="system.html"><i class="icon-font">&#xe017;</i>系统设置</a></li>
-                        <li><a href="system.html"><i class="icon-font">&#xe037;</i>清理缓存</a></li>
-                        <li><a href="system.html"><i class="icon-font">&#xe046;</i>数据备份</a></li>
-                        <li><a href="system.html"><i class="icon-font">&#xe045;</i>数据还原</a></li>
-                    </ul>
-                </li>
+                
             </ul>
         </div>
     </div>

@@ -16,8 +16,8 @@
 <div class="banner"><a href="#"><img src="img/temp/banner1.png"></a></div>
 <!-----------------address------------------------------->
 <div class="address">
-    <div class="wrapper clearfix"><a href="indexselect">首页</a><span>/</span><a
-            href="flowerDer.html">books</a><span>/</span><a href="proList.html" class="on">${title}</a></div>
+    <div class="wrapper clearfix"><a href="indexselect">首页</a><span>/</span>
+    <a href="JavaScript:;" class="on">${title}</a></div>
 </div><!-------------------current---------------------->
 <div class="current">
     <div class="wrapper clearfix"><h3 class="fl">${title}</h3>
@@ -36,27 +36,28 @@
     </c:forEach>
 </ul>
 <div class="gotop"><a href="showcart">
-    <dl class="goCart">
+    <dl>
         <dt><img src="img/gt1.png"/></dt>
         <dd>去购<br/>物车</dd>
-        </dl>
-</a><a href="#" class="dh">
+    </dl>
+</a><a href="userdiscussselect" class="dh">
     <dl>
         <dt><img src="img/gt2.png"/></dt>
-        <dd>联系<br/>客服</dd>
+        <dd>去交<br/>流区</dd>
     </dl>
 </a><a href="mygxin.jsp">
     <dl>
         <dt><img src="img/gt3.png"/></dt>
         <dd>个人<br/>中心</dd>
     </dl>
-</a><a href="#" class="toptop" style="display: none;">
+</a><a href="#" class="toptop" style="display: none">
     <dl>
         <dt><img src="img/gt4.png"/></dt>
         <dd>返回<br/>顶部</dd>
     </dl>
 </a>
-    <p>400-800-8200</p></div>
+    <p>交流中心</p>
+    </div>
 <div class="msk"></div><!--footer-->
 <div class="footer">
     <p class="dibu">BooksShare&copy;2020-2022公司版权所有 渝ICP备080100-44备0000111000号<br/>

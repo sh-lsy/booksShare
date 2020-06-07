@@ -14,31 +14,32 @@ import com.entity.books_discuss;
 import com.service.books_discussDao;
 
 /**
- * Servlet implementation class ToCdiscuss
+ * Servlet implementation class UToCdiscuss
  */
-@WebServlet("/manage/admin_tocdiscuss")
-public class ToCdiscuss extends HttpServlet {
+@WebServlet("/utocdisscuss")
+public class UToCdiscuss extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
-
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html;charset=utf-8");
 		int pid = Integer.parseInt(request.getParameter("pid"));
 		ArrayList<books_discuss> cdiscusslist = books_discussDao.selectBypid(pid);
-		if( cdiscusslist != null) {
-		request.setAttribute("discusslist", cdiscusslist);
+		books_discuss pdiscuss = books_discussDao.selectByid(pid);
 		
-		request.getRequestDispatcher("admin_cdiscuss.jsp").forward(request, response);
+		if( cdiscusslist != null) {
+		request.setAttribute("ucdiscusslist", cdiscusslist);
+		request.setAttribute("pdiscuss", pdiscuss);
+		request.getRequestDispatcher("cdiscuss.jsp").forward(request, response);
 		}else {
 			PrintWriter out = response.getWriter();
 			
 			out.write("<script>");
 			out.write("alert('进入失败');");
-			out.write("location.href='manage/dmin_discussselect';");
+			out.write("location.href='userdiscussselect';");
 			out.write("</script>");
 		}
+	
 	}
-
 
 }

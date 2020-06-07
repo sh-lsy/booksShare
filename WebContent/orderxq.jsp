@@ -109,10 +109,10 @@
         <dt><img src="img/gt1.png"/></dt>
         <dd>去购<br/>物车</dd>
     </dl>
-</a><a href="#" class="dh">
+</a><a href="userdiscussselect" class="dh">
     <dl>
         <dt><img src="img/gt2.png"/></dt>
-        <dd>联系<br/>客服</dd>
+        <dd>去交<br/>流区</dd>
     </dl>
 </a><a href="mygxin.jsp">
     <dl>
@@ -125,7 +125,8 @@
         <dd>返回<br/>顶部</dd>
     </dl>
 </a>
-    <p>400-800-8200</p></div>
+    <p>交流中心</p>
+    </div>
 <!--footer-->
 <div class="footer">
     <p class="dibu">BooksShare&copy;2020-2022公司版权所有 渝ICP备080100-44备0000111000号<br/>

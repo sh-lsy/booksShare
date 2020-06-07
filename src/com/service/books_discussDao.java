@@ -64,6 +64,83 @@ public class books_discussDao {
 			}
 			return list;	
 		}
+	
+	/*
+	 *  根据id查询单个
+	 */
+	public static books_discuss selectByid(int id) {
+		books_discuss discuss= null;
+		
+		ResultSet rs = null;
+		Connection conn = Basedao.getconn();
+		
+		PreparedStatement ps = null;
+		
+		try {
+			String sql="select * from books_discuss  where discuss_id=?";
+			ps = conn.prepareStatement(sql);
+			ps.setInt(1,id);		
+			
+			rs=ps.executeQuery();
+			
+			while(rs.next()) {
+				 discuss= new books_discuss(
+					 rs.getInt("discuss_id"),
+					 rs.getString("discuss_content"),
+					 rs.getInt("discuss_p_id"),
+					 rs.getString("discuss_u_id"),
+					 rs.getString("discuss_u_name"),
+					 rs.getString("discuss_time")
+						);	
+				
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally {
+			Basedao.closeall(rs, ps, conn);
+		}
+		return discuss;
+	}
+	/*
+	 *  根据用户查询
+	 */
+	public static ArrayList<books_discuss> selectByu_id (String uid){
+		
+		ArrayList<books_discuss> list = new ArrayList<books_discuss>();
+			
+			ResultSet rs = null;
+			Connection conn = Basedao.getconn();
+			
+			PreparedStatement ps = null;
+			
+			try {
+				String sql="select * from books_discuss  where discuss_u_id=?";
+				ps = conn.prepareStatement(sql);
+				ps.setString(1, uid);		
+				
+				rs=ps.executeQuery();
+				
+				while(rs.next()) {
+					books_discuss discuss= new books_discuss(
+						 rs.getInt("discuss_id"),
+						 rs.getString("discuss_content"),
+						 rs.getInt("discuss_p_id"),
+						 rs.getString("discuss_u_id"),
+						 rs.getString("discuss_u_name"),
+						 rs.getString("discuss_time")
+							);	
+					list.add(discuss);
+				}
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}finally {
+				Basedao.closeall(rs, ps, conn);
+			}
+			return list;	
+		}
+	
 	/*
 	 * 删除
 	 */

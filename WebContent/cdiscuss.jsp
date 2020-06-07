@@ -8,7 +8,7 @@
     <meta charset="utf-8"/>
     <title>booksShare</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <script src="js/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
+     <script src="js/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
     <link rel="stylesheet" type="text/css" href="css/public.css"/>
     <link rel="stylesheet" type="text/css" href="css/myorder.css"/>
     <link rel="stylesheet" href="../res/layui/css/layui.css">
@@ -32,6 +32,16 @@
       flex-direction: column;
       justify-content: center;
     }
+    .pdismes{
+      height: 60px;
+      width: 600px;
+      margin: 0 auto;
+      padding: 10px 0;
+      text-align: center;
+      font-size:60px;
+      line-height:60px;
+      margin-bottom:30px;
+    }
     .dismes{
       height: 60px;
       width: 600px;
@@ -48,6 +58,7 @@
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;
+    
     }
     .dismes p span{
       display: inline-block;
@@ -58,7 +69,7 @@
       white-space: nowrap;
       text-overflow: ellipsis;
     }
-  	  .mytextarea{
+  	  	  .mytextarea{
       width: 600px;
       height: 600px;
       position: absolute;
@@ -67,7 +78,7 @@
       margin-top: -200px;
       margin-left: -300px;
       display: none;
-      z-index: 9999999;
+      z-index: 999;
     }
     .text textarea{
       width: 600px;
@@ -84,29 +95,8 @@
     }
   	</style>
 </head>
-<body>
-
-  <div class="mytextarea">
-    <form action="udiscussadd" method="post" >
-   
-      <div class="text">
-      	<input type="hidden" value="0" name="pid">
-      	<input type="hidden" value="${name.user_id}" name="u_id">
-        <input type="hidden" value="${name.user_name}" name="u_name">
-        <input type="hidden" value="" name="time" id="time">
-        <textarea placeholder="请输入内容。。。" name="cvalue"></textarea>
-      </div>
-    <div >
-      <input type="submit" id="usub">
-      <div class="hidetext" style="color:red">取消发布</div>
-    </div>
-  </form>
-  
-  </div>
-
-<!------------------------------head------------------------------>
+<body><!------------------------------head------------------------------>
 <div class="head ding">
-
     <div class="wrapper clearfix">
         <div class="clearfix" id="top"><h1 class="fl"><a href="indexselect">
          <img src="img/temp/logo.png" style="width: 144px; opacity: 0.8;"/></a></h1>
@@ -133,10 +123,9 @@
 </div><!------------------------------idea------------------------------>
 <div class="address mt">
     <div class="wrapper clearfix"><a href="indexselect" class="fl">首页</a><span>/</span>
-    <a href="userdiscussselect">交流中心</a><span>/</span><a href="JavaScript:;" class="on">所有话题</a></div>
-    
+    <a href="userdiscussselect">交流中心</a><span>/</span><a href="javascript:;">${pdiscuss.discuss_content }</a>
     <div style="float:right;" class="hidetext1">
-    	<a style="color:red" href="javascript:;">发布主题</a>
+    	<a style="color:red" href="javascript:;">发布交流信息</a>
     </div>
     </div>
 </div>
@@ -144,18 +133,18 @@
  <div id="discuss">
     <div id="message">
       <ul class="disu">
-      
-      	<c:forEach var="u" items="${udiscusslist}">
+       <li class="pdismes">${pdiscuss.discuss_content }</li>
+      	<c:forEach var="u" items="${ucdiscusslist}">
       	
         <li class="dismes">
-        <a href="utocdisscuss?pid=${u.discuss_id }" title="点击进入该话题">
+       
           <div>
           ${u.discuss_content } 
           </div>
           <p>
             <span>发布人：${u.discuss_u_id }</span> <span>发布时间：${u.discuss_time }</span>
           </p>
-          </a>
+          
         </li>
          
         </c:forEach>
@@ -166,6 +155,24 @@
 
 
 
+
+  <div class="mytextarea">
+    <form action="udiscussadd" method="post" >
+   
+      <div class="text">
+      	<input type="hidden" value="${pdiscuss.discuss_id }" name="pid">
+      	<input type="hidden" value="${name.user_id}" name="u_id">
+        <input type="hidden" value="${name.user_name}" name="u_name">
+        <input type="hidden" value="" name="time" id="time">
+        <textarea placeholder="请输入内容。。。" name="cvalue"></textarea>
+      </div>
+    <div >
+      <input type="submit" id="usub">
+      <div class="hidetext" style="color:red">取消发布</div>
+    </div>
+  </form>
+  
+  </div>
   <!--返回顶部-->
 <div class="gotop"><a href="showcart">
     <dl>
@@ -175,7 +182,7 @@
 </a><a href="javascript:show1();" class="dh" id="showt">
     <dl>
         <dt><img src="img/gt2.png"/></dt>
-        <dd>发布<br/>主题</dd>
+        <dd>发布<br/>交流</dd>
     </dl>
 </a><a href="mygxin.jsp">
     <dl>
@@ -188,7 +195,7 @@
         <dd>返回<br/>顶部</dd>
     </dl>
 </a>
-    <p>交流主题</p>
+    <p>交流信息</p>
     </div>
  <script>
    $(".hidetext").click(function(){
@@ -229,22 +236,10 @@
  </script>
 
 
-
-
-
-
-
-
-
-
-
-
-    
-<div class="footer" style="margin-top:200px;">
+<div class="footer" style="margin-top:100px">
     <p class="dibu">BooksShare&copy;2020-2022公司版权所有 渝ICP备080100-44备0000111000号<br/>
         违法和不良信息举报电话：100-1000-1000</p>
 </div>
-
 <script src="js/public.js" type="text/javascript" charset="utf-8"></script>
 <script src="js/user.js" type="text/javascript" charset="utf-8"></script>
 </body>

@@ -74,7 +74,7 @@ public class SelectBooksView extends HttpServlet {
 			
 			request.setAttribute("cate", cate);
 		}
-		
+		request.getRequestDispatcher("index.jsp");
 		request.getRequestDispatcher("booksView.jsp").forward(request, response);
 	}
 

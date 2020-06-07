@@ -48,17 +48,17 @@
                 <ul>
                     <li><a href="tobooksShare">共享图书</a></li>
                     <li ><a href="userorderselect">我的图书</a></li>
-                    <li><a href="myprod.html">我的交流</a></li>
+                    <li><a href="toMydiscuss">我的交流</a></li>
                 </ul>
                 <h4>个人中心</h4>
                 <ul>
                     <li ><a href="mygxin.jsp">我的中心</a></li>
-                    <li class="on"><a href="showmysharebooks">我的共享</a></li>
+                    <li ><a href="showmysharebooks">我的共享</a></li>
                 </ul>
                 <h4>账户管理</h4>
                 <ul>
-                    <li><a href="mygrxx.jsp">个人信息</a></li>
-                    <li><a href="remima.html">修改密码</a></li>
+                    <li class="on"><a href="mygrxx.jsp">个人信息</a></li>
+                    <li><a href="remima.jsp">修改密码</a></li>
                 </ul>
             </div>
         </div>
@@ -112,10 +112,10 @@
         <dt><img src="img/gt1.png"/></dt>
         <dd>去购<br/>物车</dd>
     </dl>
-</a><a href="javascript:;" class="dh">
+</a><a href="userdiscussselect" class="dh">
     <dl>
         <dt><img src="img/gt2.png"/></dt>
-        <dd>联系<br/>客服</dd>
+        <dd>去交<br/>流区</dd>
     </dl>
 </a><a href="mygxin.jsp">
     <dl>
@@ -128,7 +128,8 @@
         <dd>返回<br/>顶部</dd>
     </dl>
 </a>
-    <p>400-800-8200</p></div>
+    <p>交流中心</p>
+    </div>
     <!--footer-->
 <div class="footer">
     <p class="dibu">BooksShare&copy;2020-2022公司版权所有 渝ICP备080100-44备0000111000号<br/>

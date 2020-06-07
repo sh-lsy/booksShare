@@ -9,6 +9,14 @@
     <link rel="stylesheet" type="text/css" href="css/public.css"/>
     <link rel="stylesheet" type="text/css" href="css/proList.css"/>
     <script src="js/jquery-1.12.4.min.js" type="text/javascript" charset="utf-8"></script>
+    <style>
+    .sdes{
+    	width:200px;
+    	overflow: hidden;
+text-overflow:ellipsis;
+white-space: nowrap;
+    }
+    </style>
 </head>
 <body><!--------------------------------------cart--------------------->
 <div class="head ding">
@@ -60,8 +68,8 @@
                     <img src="http://localhost:8080/img/${rs.cart_b_filename }" width="120" height="120" >
                     </dt>
                     <dd class="fl"><p>${rs.cart_b_name }</p>
-                        <p>图书分类</p>
-                        <p>${rs.cart_b_description }</p></dd>
+                        <p>图书描述</p>
+                        <p class="sdes">${rs.cart_b_description }</p></dd>
                 </dl>
             </a></div>
             <div class="price">${rs.cart_b_user }</div>
@@ -109,23 +117,24 @@
         <dt><img src="img/gt1.png"/></dt>
         <dd>去购<br/>物车</dd>
     </dl>
-</a><a href="#" class="dh">
+</a><a href="userdiscussselect" class="dh">
     <dl>
         <dt><img src="img/gt2.png"/></dt>
-        <dd>联系<br/>客服</dd>
+        <dd>去交<br/>流区</dd>
     </dl>
 </a><a href="mygxin.jsp">
     <dl>
         <dt><img src="img/gt3.png"/></dt>
         <dd>个人<br/>中心</dd>
     </dl>
-</a><a href="#" class="toptop" style="display: none;">
+</a><a href="#" class="toptop" style="display: none">
     <dl>
         <dt><img src="img/gt4.png"/></dt>
         <dd>返回<br/>顶部</dd>
     </dl>
 </a>
-    <p>400-800-8200</p></div>
+    <p>交流中心</p>
+    </div>
 <!--footer-->
 
 <div class="pleaseC"><p>请选择宝贝</p><img class="off" src="img/temp/off.jpg"/></div>
